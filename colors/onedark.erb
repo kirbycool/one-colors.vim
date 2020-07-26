@@ -55,28 +55,24 @@
     #                 or "NONE"
     #   "black"       color name used by less capable color terminals, can be "darkred",
     #                 "red", "darkgreen", "green", "darkyellow", "yellow", "darkblue",
-    #                 "blue", "darkmagenta", "magenta", "black", "darkgrey", "grey",
+    #                 "blue", "darkmagenta", "magenta", "black", "darkgray", "gray",
     #                 "white", or "NONE"
     # ]
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
-    black       = ["#000000", 0, "black"]
-    darkred     = ["#800000", 1, "darkred"]
-    darkgreen   = ["#008000", 2, "darkgreen"]
-    darkyellow  = ["#808000", 3, "darkyellow"]
-    darkblue    = ["#000080", 4, "darkblue"]
-    darkmagenta = ["#800080", 5, "darkmagenta"]
-    darkcyan    = ["#008080", 6, "darkcyan"]
-    gray        = ["#c0c0c0", 7, "gray"]
-    darkgray    = ["#808080", 8, "darkgray"]
-    red         = ["#ff0000", 9, "red"]
-    green       = ["#00ff00", 10, "green"]
-    yellow      = ["#ffff00", 11, "yellow"]
-    blue        = ["#0000ff", 12, "blue"]
-    magenta     = ["#ff00ff", 13, "magenta"]
-    cyan        = ["#00ffff", 14, "cyan"]
-    white       = ["#ffffff", 15, "white"]
+    black       = ["#282c34", "NONE", "black"]
+    darkred     = ["#be5046", "NONE", "darkred"]
+    darkyellow  = ["#d19a66", "NONE", "darkyellow"]
+    gray        = ["#828997", "NONE", "gray"]
+    darkgray    = ["#5c6370", "NONE", "darkgray"]
+    red         = ["#e06c75", "NONE", "red"]
+    green       = ["#98c379", "NONE", "green"]
+    yellow      = ["#e5c07b", "NONE", "yellow"]
+    blue        = ["#61afef", "NONE", "blue"]
+    magenta     = ["#c678dd", "NONE", "magenta"]
+    cyan        = ["#56b6c2", "NONE", "cyan"]
+    white       = ["#abb2bf", "NONE", "white"]
 
     # Step 4: highlights
     #
@@ -116,75 +112,94 @@
     # :help highlight-default, the others are taken from :help group-name. Both help sections
     # are good reads, by the way.
     highlights = [
-        [ "Normal", white, darkgray, "NONE" ],
-        [ "NonText", white, darkgray, "NONE" ],
+        # hightlight-default
+        [ "ColorColumn", gray, "NONE", "NONE" ],
+        [ "Conceal", "NONE", white, "NONE" ],
+        [ "Cursor", "NONE", white, "NONE" ],
+        [ "CursorColumn", darkgray, "NONE", "NONE" ],
+        [ "CursorIM", "Cursor" ],
+        [ "CursorLine", "NONE", "NONE", "NONE" ],
+        [ "CursorLineNr", "NONE", white, "NONE" ],
+        [ "DiffAdd", "NONE", green, "NONE" ],
+        [ "DiffChange", "NONE", yellow, "NONE" ],
+        [ "DiffDelete", "NONE", red, "NONE" ],
+        [ "DiffText", "NONE", yellow, "NONE" ],
+        [ "Directory", "NONE", blue, "NONE" ],
         [ "EndOfBuffer","NonText" ],
-        [ "Comment", white, darkgray, "NONE" ],
-        [ "Constant", white, darkgray, "NONE" ],
-        [ "Error", white, darkgray, "NONE" ],
-        [ "Identifier", white, darkgray, "NONE" ],
-        [ "Ignore", white, darkgray, "NONE" ],
-        [ "PreProc", white, darkgray, "NONE" ],
-        [ "Special", white, darkgray, "NONE" ],
-        [ "Statement", white, darkgray, "NONE" ],
-        [ "String", white, darkgray, "NONE" ],
-        [ "Number", "Constant" ],
-        [ "Todo", white, darkgray, "NONE" ],
-        [ "Type", white, darkgray, "NONE" ],
-        [ "Underlined", white, darkgray, "NONE" ],
-        [ "StatusLine", white, darkgray, "NONE" ],
-        [ "StatusLineNC", white, darkgray, "NONE" ],
+        [ "Error", "NONE", white, "NONE" ],
+        [ "ErrorMsg", "NONE", red, "NONE" ],
+        [ "FoldColumn", "NONE", "NONE", "NONE" ],
+        [ "Folded", "NONE", darkgray, "NONE" ],
+        [ "Ignore", "NONE", darkgray, "NONE" ],
+        [ "IncSearch", yellow, "NONE", "NONE" ],
+        [ "LineNr", "NONE", darkgray, "NONE" ],
+        [ "MatchParen", "NONE", blue, "underline" ],
+        [ "ModeMsg", "NONE", yellow, "NONE" ],
+        [ "MoreMsg", "NONE", blue, "NONE" ],
+        [ "NonText", "NONE", gray, "NONE" ],
+        [ "Normal", "NONE", white, "NONE" ],
+        [ "Pmenu", gray, "NONE", "NONE" ],
+        [ "PmenuSbar", darkgray, "NONE", "NONE" ],
+        [ "PmenuSel", blue, "NONE", "NONE" ],
+        [ "PmenuThumb", white, "NONE", "NONE" ],
+        [ "Question", "NONE", white, "NONE" ],
+        [ "QuickFixLine", yellow, "NONE", "NONE" ],
+        [ "Search", yellow, "NONE", "NONE" ],
+        [ "SignColumn", "NONE", "NONE", "NONE" ],
+        [ "SpellBad", "NONE", "NONE", "underline", red ],
+        [ "SpellCap", "SpellBad" ],
+        [ "SpellLocal", "SpellBad" ],
+        [ "SpellRare", "SpellBad" ],
+        [ "StatusLine", gray, white, "NONE" ],
+        [ "StatusLineNC", "NONE", gray, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-        [ "VertSplit", white, darkgray, "NONE" ],
-        [ "TabLine", white, darkgray, "NONE" ],
-        [ "TabLineFill", white, darkgray, "NONE" ],
-        [ "TabLineSel", white, darkgray, "NONE" ],
-        [ "Title", white, darkgray, "NONE" ],
-        [ "CursorLine", white, darkgray, "NONE" ],
-        [ "LineNr", white, darkgray, "NONE" ],
-        [ "CursorLineNr", white, darkgray, "NONE" ],
-        [ "helpLeadBlank", white, darkgray, "NONE" ],
-        [ "helpNormal", white, darkgray, "NONE" ],
-        [ "Visual", white, darkgray, "NONE" ],
-        [ "VisualNOS", white, darkgray, "NONE" ],
-        [ "Pmenu", white, darkgray, "NONE" ],
-        [ "PmenuSbar", white, darkgray, "NONE" ],
-        [ "PmenuSel", white, darkgray, "NONE" ],
-        [ "PmenuThumb", white, darkgray, "NONE" ],
-        [ "FoldColumn", white, darkgray, "NONE" ],
-        [ "Folded", white, darkgray, "NONE" ],
-        [ "WildMenu", white, darkgray, "NONE" ],
-        [ "SpecialKey", white, darkgray, "NONE" ],
-        [ "DiffAdd", white, darkgray, "NONE" ],
-        [ "DiffChange", white, darkgray, "NONE" ],
-        [ "DiffDelete", white, darkgray, "NONE" ],
-        [ "DiffText", white, darkgray, "NONE" ],
-        [ "IncSearch", white, darkgray, "NONE" ],
-        [ "Search", white, darkgray, "NONE" ],
-        [ "Directory", white, darkgray, "NONE" ],
-        [ "MatchParen", white, darkgray, "NONE" ],
-        [ "SpellBad", white, darkgray, "NONE", red ],
-        [ "SpellCap", white, darkgray, "NONE", blue ],
-        [ "SpellLocal", white, darkgray, "NONE", magenta ],
-        [ "SpellRare", white, darkgray, "NONE", cyan ],
-        [ "ColorColumn", white, darkgray, "NONE" ],
-        [ "SignColumn", white, darkgray, "NONE" ],
-        [ "ErrorMsg", white, darkgray, "NONE" ],
-        [ "ModeMsg", white, darkgray, "NONE" ],
-        [ "MoreMsg", white, darkgray, "NONE" ],
-        [ "Question", white, darkgray, "NONE" ],
-        [ "WarningMsg", "Error" ],
-        [ "Cursor", white, darkgray, "NONE" ],
-        [ "CursorIM", "Cursor" ],
-        [ "CursorColumn", white, darkgray, "NONE" ],
-        [ "QuickFixLine", white, darkgray, "NONE" ],
+        [ "TabLine", gray, white, "NONE" ],
+        [ "TabLineFill", "NONE", "NONE", "NONE" ],
+        [ "TabLineSel", gray, white, "NONE" ],
         [ "Terminal", "Normal" ],
-        [ "Conceal", white, darkgray, "NONE" ],
-        [ "ToolbarLine", white, darkgray, "NONE" ],
-        [ "ToolbarButton", white, darkgray, "NONE" ],
-        [ "debugPC", white, darkgray, "NONE" ],
-        [ "debugBreakpoint", white, darkgray, "NONE" ],
+        [ "Title", "NONE", white, "NONE" ],
+        [ "Underlined", "NONE", white, "underline" ],
+        [ "VertSplit", "NONE", darkgray, "NONE" ],
+        [ "Visual", gray, "NONE", "NONE" ],
+        [ "VisualNOS", white, "NONE", "NONE" ],
+        [ "WarningMsg", "Error" ],
+        [ "WildMenu", black, blue, "NONE" ],
+
+        # group-name
+        [ "Comment", "NONE", darkgray, "NONE" ],
+
+        [ "Constant", "NONE", darkyellow, "NONE" ],
+        [ "Number", "Constant" ],
+        [ "Float", "Constant" ],
+        [ "Boolean", "Constant" ],
+        [ "String", "NONE", green, "NONE" ],
+        [ "Character", "String" ],
+
+        [ "Identifier", "NONE", red, "NONE" ],
+        [ "Function", "NONE", blue, "NONE" ],
+
+        [ "Statement", "NONE", magenta, "NONE" ],
+        [ "Keyword", "NONE", magenta, "NONE" ],
+        [ "Conditional", "Keyword" ],
+        [ "Repeat", "Keyword" ],
+        [ "Label", "Keyword" ],
+        [ "Operator", "Keyword" ],
+
+        [ "PreProc", "NONE", yellow, "NONE" ],
+        [ "PreCondit", "PreProc" ],
+        [ "Include", "NONE", blue, "NONE" ],
+        [ "Define", "NONE", magenta, "NONE" ],
+        [ "Macro", "Define" ],
+
+        [ "Type", "None", yellow, "NONE" ],
+        [ "StorageClass", "None", yellow, "NONE" ],
+        [ "Structure", "None", yellow, "NONE" ],
+        [ "Typedef", "None", yellow, "NONE" ],
+        
+        [ "Special", "NONE", blue, "NONE" ],
+
+        [ "Todo", "NONE", magenta, "NONE" ]
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
@@ -221,22 +236,22 @@
     # While you are certainly free to make colors 0 to 7 shades of blue,
     # this will inevitably cause usability issues so… be careful.
     terminal_ansi_colors = [
-        black,
-        darkred,
-        darkgreen,
-        darkyellow,
-        darkblue,
-        darkmagenta,
-        darkcyan,
-        gray,
-        darkgray,
-        red,
-        green,
-        yellow,
-        blue,
-        magenta,
-        cyan,
-        white
+    #     black,
+    #     darkred,
+    #     darkgreen,
+    #     darkyellow,
+    #     darkblue,
+    #     darkmagenta,
+    #     darkcyan,
+    #     gray,
+    #     darkgray,
+    #     red,
+    #     green,
+    #     yellow,
+    #     blue,
+    #     magenta,
+    #     cyan,
+    #     white
     ]
 
     # Step 5: generation

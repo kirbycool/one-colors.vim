@@ -1,52 +1,7 @@
-# Vim-RNB, a Vim colorscheme template
+# one-colors.vim, yet another one-dark colorscheme
 
-## What is this thing?
+This a vim approximation of the Atom editor's [one-dark](https://github.com/atom/atom/tree/master/packages/one-dark-syntax) colorscheme. It's built using the [RNB](https://github.com/romainl/vim-rnb) colorscheme template.
 
-RNB is a template designed to help vimmers create their own colorschemes without much effort.
+I've tried to stay as true to the original Atom colorscheme as possible, while also keeping the vim highlights lightweight (you wont find any plugin specific hightlight groups here).
 
-In reality, Vim colorschemes are not that hard to write but there are several benefits to using a template such as RNB:
-
-* you can define/modify variables once instead of messing around with potentially botched substitutions,
-* you can distribute a lean colorscheme, free from unnecessary logic,
-* you can distribute the source alongside the colorscheme, making it easy for your users to experiment and adapt *your* colorscheme to *their* needs,
-* you can focus on the design of your colorscheme rather than its implementation,
-* you can start working on new colorscheme ideas very easily.
-
-## What do I need to use it?
-
-[ERB](https://ruby-doc.org/stdlib-2.6.3/libdoc/erb/rdoc/index.html), the templating engine used here, is part of Ruby's standard library so you will need [Ruby](https://www.ruby-lang.org/) to generate your colorscheme. Neither ERB nor Ruby knowledge is required, though.
-
-## How do I use it?
-
-The process is divided in five steps:
-
-1. rename `colors/rnb.erb` to `colors/name_of_your_colorscheme.erb`,
-2. start by editing your colorscheme's information,
-3. define your colors,
-4. define your highlight groups and links,
-5. and generate your colorscheme.
-
-Steps 2 to 5 are thoroughly described in the colorscheme template itself in an effort to make it portable: if you ever decide to distribute your colorscheme you can simply package the template with it.
-
-## Built with RNB
-
-The following colorschemes are known to be built with RNB:
-
-* [Apprentice](https://github.com/romainl/Apprentice)
-* [Dichromatic](https://github.com/romainl/vim-dichromatic)
-* [Bruin](https://git.sr.ht/~romainl/vim-bruin)
-* [Sweet16](https://github.com/romainl/vim-sweet16)
-* [Paper](https://github.com/swalladge/paper.vim)
-* [Journeyman](https://github.com/markeganfuller/vim-journeyman)
-* [Warlock](https://github.com/hardselius/warlock)
-* [Cyberpunk-Neon](https://github.com/Roboron3042/Cyberpunk-Neon)
-* [Tutfish](https://github.com/benwr/tuftish)
-* [Nisha](https://github.com/heraldofsolace/nisha-vim)
-* (your colorscheme here, send us a PR!)
-
-## TODO
-
-* `README.md` template
-
-
-[//]: # ( Vim: set spell spelllang=en: )
+Currently this only supports one-dark, but will eventually also include the companion [one-light](https://github.com/atom/atom/tree/master/packages/one-light-syntax) colorscheme.
