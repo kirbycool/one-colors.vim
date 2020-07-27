@@ -38,16 +38,16 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Normal ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
     hi Pmenu ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=NONE gui=NONE
     hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=NONE gui=NONE
-    hi PmenuSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#61afef guifg=NONE gui=NONE
+    hi PmenuSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#61afef guifg=#282c34 gui=NONE
     hi PmenuThumb ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#abb2bf guifg=NONE gui=NONE
     hi Question ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
     hi QuickFixLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=NONE gui=NONE
     hi Search ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#e06c75
-    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=#abb2bf gui=NONE
+    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=#abb2bf gui=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#828997 gui=NONE
-    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=#abb2bf gui=NONE
+    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=#abb2bf gui=NONE
     hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi TabLineSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=#abb2bf gui=NONE
     hi Title ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
@@ -101,16 +101,16 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Normal ctermbg=NONE ctermfg=white cterm=NONE
     hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi PmenuSbar ctermbg=darkgray ctermfg=NONE cterm=NONE
-    hi PmenuSel ctermbg=blue ctermfg=NONE cterm=NONE
+    hi PmenuSel ctermbg=blue ctermfg=black cterm=NONE
     hi PmenuThumb ctermbg=white ctermfg=NONE cterm=NONE
     hi Question ctermbg=NONE ctermfg=white cterm=NONE
     hi QuickFixLine ctermbg=yellow ctermfg=NONE cterm=NONE
     hi Search ctermbg=yellow ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline
-    hi StatusLine ctermbg=gray ctermfg=white cterm=NONE
+    hi StatusLine ctermbg=darkgray ctermfg=white cterm=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=gray cterm=NONE
-    hi TabLine ctermbg=gray ctermfg=white cterm=NONE
+    hi TabLine ctermbg=darkgray ctermfg=white cterm=NONE
     hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE
     hi TabLineSel ctermbg=gray ctermfg=white cterm=NONE
     hi Title ctermbg=NONE ctermfg=white cterm=NONE
