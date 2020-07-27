@@ -2,7 +2,7 @@
 " Author:      foo (foo@foo.foo)
 " Webpage:     http://www.example.com
 " Description: Lorem ipsum dolor sit amet.
-" Last Change: 2020-07-26
+" Last Change: 2020-07-27
 
 hi clear
 
@@ -71,6 +71,8 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Structure ctermbg=None ctermfg=NONE cterm=NONE guibg=None guifg=#e5c07b gui=NONE
     hi Typedef ctermbg=None ctermfg=NONE cterm=NONE guibg=None guifg=#e5c07b gui=NONE
     hi Special ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#61afef gui=NONE
+    hi Tag ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
+    hi Delimiter ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
     hi Todo ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#c678dd gui=NONE
 
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
@@ -134,6 +136,8 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Structure ctermbg=None ctermfg=yellow cterm=NONE
     hi Typedef ctermbg=None ctermfg=yellow cterm=NONE
     hi Special ctermbg=NONE ctermfg=blue cterm=NONE
+    hi Tag ctermbg=NONE ctermfg=white cterm=NONE
+    hi Delimiter ctermbg=NONE ctermfg=white cterm=NONE
     hi Todo ctermbg=NONE ctermfg=magenta cterm=NONE
 endif
 
@@ -156,5 +160,8 @@ hi link Label Keyword
 hi link Operator Keyword
 hi link PreCondit PreProc
 hi link Macro Define
+hi link SpecialChar Special
+hi link SpecialComment Special
+hi link Debug Keyword
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)
