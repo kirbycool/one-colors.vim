@@ -36,7 +36,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi MoreMsg ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#61afef gui=NONE
     hi NonText ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#828997 gui=NONE
     hi Normal ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
-    hi Pmenu ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=NONE gui=NONE
+    hi Pmenu ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=NONE gui=NONE
     hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=NONE gui=NONE
     hi PmenuSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#61afef guifg=NONE gui=NONE
     hi PmenuThumb ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#abb2bf guifg=NONE gui=NONE
@@ -99,7 +99,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi MoreMsg ctermbg=NONE ctermfg=blue cterm=NONE
     hi NonText ctermbg=NONE ctermfg=gray cterm=NONE
     hi Normal ctermbg=NONE ctermfg=white cterm=NONE
-    hi Pmenu ctermbg=gray ctermfg=NONE cterm=NONE
+    hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi PmenuSbar ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi PmenuSel ctermbg=blue ctermfg=NONE cterm=NONE
     hi PmenuThumb ctermbg=white ctermfg=NONE cterm=NONE
