@@ -2,7 +2,7 @@
 " Author:      foo (foo@foo.foo)
 " Webpage:     http://www.example.com
 " Description: Lorem ipsum dolor sit amet.
-" Last Change: 2020-07-27
+" Last Change: 2020-07-29
 
 hi clear
 
@@ -41,7 +41,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi PmenuSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#61afef guifg=#282c34 gui=NONE
     hi PmenuThumb ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#abb2bf guifg=NONE gui=NONE
     hi Question ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
-    hi QuickFixLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=NONE gui=NONE
+    hi QuickFixLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=#282c34 gui=NONE
     hi Search ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#e06c75
@@ -106,7 +106,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi PmenuSel ctermbg=blue ctermfg=black cterm=NONE
     hi PmenuThumb ctermbg=white ctermfg=NONE cterm=NONE
     hi Question ctermbg=NONE ctermfg=white cterm=NONE
-    hi QuickFixLine ctermbg=yellow ctermfg=NONE cterm=NONE
+    hi QuickFixLine ctermbg=yellow ctermfg=black cterm=NONE
     hi Search ctermbg=yellow ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline
