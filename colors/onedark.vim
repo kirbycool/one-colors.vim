@@ -1,8 +1,8 @@
-" rnb.vim -- Vim color scheme.
-" Author:      foo (foo@foo.foo)
-" Webpage:     http://www.example.com
-" Description: Lorem ipsum dolor sit amet.
-" Last Change: 2020-07-29
+" onedark.vim -- Vim color scheme.
+" Author:      Kirby Cool ()
+" Webpage:     
+" Description: 
+" Last Change: 2020-09-02
 
 hi clear
 
@@ -10,7 +10,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "rnb"
+let colors_name = "onedark"
 
 if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ColorColumn ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=NONE gui=NONE
