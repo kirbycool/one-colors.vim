@@ -2,7 +2,7 @@
 " Author:      Kirby Cool ()
 " Webpage:     
 " Description: 
-" Last Change: 2020-09-02
+" Last Change: 2020-09-29
 
 hi clear
 
@@ -35,7 +35,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi ModeMsg ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#e5c07b gui=NONE
     hi MoreMsg ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#61afef gui=NONE
     hi NonText ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#828997 gui=NONE
-    hi Normal ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
+    hi Normal ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#282c34 guifg=#abb2bf gui=NONE
     hi Pmenu ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#3E4452 guifg=NONE gui=NONE
     hi PmenuSbar ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=NONE gui=NONE
     hi PmenuSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#61afef guifg=#282c34 gui=NONE
@@ -100,8 +100,8 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi ModeMsg ctermbg=NONE ctermfg=yellow cterm=NONE
     hi MoreMsg ctermbg=NONE ctermfg=blue cterm=NONE
     hi NonText ctermbg=NONE ctermfg=gray cterm=NONE
-    hi Normal ctermbg=NONE ctermfg=white cterm=NONE
-    hi Pmenu ctermbg=darkgray ctermfg=NONE cterm=NONE
+    hi Normal ctermbg=black ctermfg=white cterm=NONE
+    hi Pmenu ctermbg=mono3 ctermfg=NONE cterm=NONE
     hi PmenuSbar ctermbg=darkgray ctermfg=NONE cterm=NONE
     hi PmenuSel ctermbg=blue ctermfg=black cterm=NONE
     hi PmenuThumb ctermbg=white ctermfg=NONE cterm=NONE

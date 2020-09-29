@@ -24,8 +24,8 @@
     # If you forked/cloned/copied this repository to create your own colorscheme, you will have to
     # rename this template to match the name of your colorscheme.
     #
-    # NOTE: Vim doesn't really care about whitespace in the name of the colorscheme but it does for
-    # filenames so make sure your filename doesn't have any whitespace character.
+    # NOTE: Vim doesn't really care about mono1space in the name of the colorscheme but it does for
+    # filenames so make sure your filename doesn't have any mono1space character.
     #
     #   colorscheme name | template filename | colorscheme filename
     #  ------------------|-------------------|----------------------
@@ -46,45 +46,50 @@
 
     # Step 3: colors
     #
-    # black = [       give each color a distinctive name
+    # bg = [       give each color a distinctive name
     #   "#000000",    hexadecimal color used in GVim/MacVim or "NONE"
     #   0,            integer between 0 and 255 used by terminals supporting 256 colors
     #                 or "NONE"
-    #   "black"       color name used by less capable color terminals, can be "darkred",
+    #   "bg"       color name used by less capable color terminals, can be "darkred",
     #                 "red", "darkgreen", "green", "darkyellow", "yellow", "darkblue",
-    #                 "blue", "darkmagenta", "magenta", "black", "darkgray", "gray",
-    #                 "white", or "NONE"
+    #                 "blue", "darkmagenta", "magenta", "bg", "mono3", "mono2",
+    #                 "mono1", or "NONE"
     # ]
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim (MacOS), and any properly set up terminal emulator.
-    black       = ["#282c34", "NONE", "black"]
-    darkred     = ["#be5046", "NONE", "darkred"]
-    darkyellow  = ["#d19a66", "NONE", "darkyellow"]
-    gray        = ["#828997", "NONE", "gray"]
-    darkgray    = ["#5c6370", "NONE", "darkgray"]
-    red         = ["#e06c75", "NONE", "red"]
-    green       = ["#98c379", "NONE", "green"]
-    yellow      = ["#e5c07b", "NONE", "yellow"]
+
+    # Using the atom terminology from here
+    # https://github.com/atom/atom/blob/master/packages/one-dark-syntax/styles/colors.less
+    mono1       = ["#abb2bf", "NONE", "white"]
+    mono2       = ["#828997", "NONE", "gray"]
+    mono3       = ["#5c6370", "NONE", "darkgray"]
+
+    cyan        = ["#56b6c2", "NONE", "cyan"]
     blue        = ["#61afef", "NONE", "blue"]
     magenta     = ["#c678dd", "NONE", "magenta"]
-    cyan        = ["#56b6c2", "NONE", "cyan"]
-    white       = ["#abb2bf", "NONE", "white"]
+    green       = ["#98c379", "NONE", "green"]
+    red         = ["#e06c75", "NONE", "red"]
+    darkred     = ["#be5046", "NONE", "darkred"]
+    yellow      = ["#e5c07b", "NONE", "yellow"]
+    darkyellow  = ["#d19a66", "NONE", "darkyellow"]
 
-    menugray    = ["#3E4452", "NONE", "darkgray"] # Stolen from joshdick/onedark.vim
+    bg        = ["#282c34", "NONE", "black"]
+
+    menugray    = ["#3E4452", "NONE", "mono3"] # Stolen from joshdick/onedark.vim
     # Step 4: highlights
     #
     # You can define highlight groups like this:
     #
     #   [ "Normal",       name of the highlight group
-    #     white,          the color used for background color, or use "NONE", "fg" or "bg"
-    #     darkgray,       the color used for foreground color, or use "NONE", "fg" or "bg"
+    #     mono1,          the color used for background color, or use "NONE", "fg" or "bg"
+    #     mono3,       the color used for foreground color, or use "NONE", "fg" or "bg"
     #     "NONE"          style, can be "bold", "underline", "reverse", "italic",
     #                     "standout", "NONE", "undercurl", or a comma-separated list of
     #                     valid attributes like "underline,bold"
     #   ]
     #
-    # The sample above tells Vim to render normal text in dark gray against a white
+    # The sample above tells Vim to render normal text in dark mono2 against a mono1
     # background, without any other styling.
     #
     # Or you can link an highlight group to another. Here, "Title" will inherit its style from
@@ -111,61 +116,61 @@
     # are good reads, by the way.
     highlights = [
         # hightlight-default
-        [ "ColorColumn", gray, "NONE", "NONE" ],
-        [ "Conceal", "NONE", white, "NONE" ],
-        [ "Cursor", "NONE", white, "NONE" ],
-        [ "CursorColumn", darkgray, "NONE", "NONE" ],
+        [ "ColorColumn", mono2, "NONE", "NONE" ],
+        [ "Conceal", "NONE", mono1, "NONE" ],
+        [ "Cursor", "NONE", mono1, "NONE" ],
+        [ "CursorColumn", mono3, "NONE", "NONE" ],
         [ "CursorIM", "Cursor" ],
         [ "CursorLine", "NONE", "NONE", "NONE" ],
-        [ "CursorLineNr", "NONE", white, "NONE" ],
+        [ "CursorLineNr", "NONE", mono1, "NONE" ],
         [ "DiffAdd", "NONE", green, "NONE" ],
         [ "DiffChange", "NONE", yellow, "NONE" ],
         [ "DiffDelete", "NONE", red, "NONE" ],
         [ "DiffText", "NONE", yellow, "NONE" ],
         [ "Directory", "NONE", blue, "NONE" ],
         [ "EndOfBuffer","NonText" ],
-        [ "Error", "NONE", white, "NONE" ],
+        [ "Error", "NONE", mono1, "NONE" ],
         [ "ErrorMsg", "NONE", red, "NONE" ],
         [ "FoldColumn", "NONE", "NONE", "NONE" ],
-        [ "Folded", "NONE", darkgray, "NONE" ],
-        [ "Ignore", "NONE", darkgray, "NONE" ],
+        [ "Folded", "NONE", mono3, "NONE" ],
+        [ "Ignore", "NONE", mono3, "NONE" ],
         [ "IncSearch", yellow, "NONE", "NONE" ],
-        [ "LineNr", "NONE", darkgray, "NONE" ],
+        [ "LineNr", "NONE", mono3, "NONE" ],
         [ "MatchParen", "NONE", blue, "underline" ],
         [ "ModeMsg", "NONE", yellow, "NONE" ],
         [ "MoreMsg", "NONE", blue, "NONE" ],
-        [ "NonText", "NONE", gray, "NONE" ],
-        [ "Normal", "NONE", white, "NONE" ],
+        [ "NonText", "NONE", mono2, "NONE" ],
+        [ "Normal", bg, mono1, "NONE" ],
         [ "Pmenu", menugray, "NONE", "NONE" ],
-        [ "PmenuSbar", darkgray, "NONE", "NONE" ],
-        [ "PmenuSel", blue, black, "NONE" ],
-        [ "PmenuThumb", white, "NONE", "NONE" ],
-        [ "Question", "NONE", white, "NONE" ],
-        [ "QuickFixLine", yellow, black, "NONE" ],
+        [ "PmenuSbar", mono3, "NONE", "NONE" ],
+        [ "PmenuSel", blue, bg, "NONE" ],
+        [ "PmenuThumb", mono1, "NONE", "NONE" ],
+        [ "Question", "NONE", mono1, "NONE" ],
+        [ "QuickFixLine", yellow, bg, "NONE" ],
         [ "Search", yellow, "NONE", "NONE" ],
         [ "SignColumn", "NONE", "NONE", "NONE" ],
         [ "SpellBad", "NONE", "NONE", "underline", red ],
         [ "SpellCap", "SpellBad" ],
         [ "SpellLocal", "SpellBad" ],
         [ "SpellRare", "SpellBad" ],
-        [ "StatusLine", darkgray, white, "NONE" ],
-        [ "StatusLineNC", "NONE", gray, "NONE" ],
+        [ "StatusLine", mono3, mono1, "NONE" ],
+        [ "StatusLineNC", "NONE", mono2, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-        [ "TabLine", darkgray, white, "NONE" ],
+        [ "TabLine", mono3, mono1, "NONE" ],
         [ "TabLineFill", "NONE", "NONE", "NONE" ],
-        [ "TabLineSel", gray, white, "NONE" ],
+        [ "TabLineSel", mono2, mono1, "NONE" ],
         [ "Terminal", "Normal" ],
-        [ "Title", "NONE", white, "NONE" ],
-        [ "Underlined", "NONE", white, "underline" ],
-        [ "VertSplit", "NONE", darkgray, "NONE" ],
-        [ "Visual", gray, "NONE", "NONE" ],
-        [ "VisualNOS", white, "NONE", "NONE" ],
+        [ "Title", "NONE", mono1, "NONE" ],
+        [ "Underlined", "NONE", mono1, "underline" ],
+        [ "VertSplit", "NONE", mono3, "NONE" ],
+        [ "Visual", mono2, "NONE", "NONE" ],
+        [ "VisualNOS", mono1, "NONE", "NONE" ],
         [ "WarningMsg", "Error" ],
-        [ "WildMenu", black, blue, "NONE" ],
+        [ "WildMenu", bg, blue, "NONE" ],
 
         # group-name
-        [ "Comment", "NONE", darkgray, "NONE" ],
+        [ "Comment", "NONE", mono3, "NONE" ],
 
         [ "Constant", "NONE", darkyellow, "NONE" ],
         [ "Number", "Constant" ],
@@ -197,8 +202,8 @@
 
         [ "Special", "NONE", blue, "NONE" ],
         [ "SpecialChar", "Special" ],
-        [ "Tag", "NONE", white, "NONE" ],
-        [ "Delimiter", "NONE", white, "NONE" ],
+        [ "Tag", "NONE", mono1, "NONE" ],
+        [ "Delimiter", "NONE", mono1, "NONE" ],
         [ "SpecialComment", "Special" ],
         [ "Debug", "Keyword" ],
 
@@ -219,42 +224,42 @@
     #
     #   Index | Name
     #  -------|-------------
-    #   0     | black
+    #   0     | bg
     #   1     | darkred
     #   2     | darkgreen
     #   3     | darkyellow
     #   4     | darkblue
     #   5     | darkmagenta
     #   6     | darkcyan
-    #   7     | gray
-    #   8     | darkgray
+    #   7     | mono2
+    #   8     | mono3
     #   9     | red
     #   10    | green
     #   11    | yellow
     #   12    | blue
     #   13    | magenta
     #   14    | cyan
-    #   15    | white
+    #   15    | mono1
     #
     # While you are certainly free to make colors 0 to 7 shades of blue,
     # this will inevitably cause usability issues so… be careful.
     terminal_ansi_colors = [
-    #     black,
+    #     bg,
     #     darkred,
     #     darkgreen,
     #     darkyellow,
     #     darkblue,
     #     darkmagenta,
     #     darkcyan,
-    #     gray,
-    #     darkgray,
+    #     mono2,
+    #     mono3,
     #     red,
     #     green,
     #     yellow,
     #     blue,
     #     magenta,
     #     cyan,
-    #     white
+    #     mono1
     ]
 
     # Step 5: generation
