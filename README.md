@@ -15,7 +15,7 @@ I've tried to stay as true to the original Atom colorscheme as possible, while a
 
 ## Installation
 
-Install the plugin with your favorite plugin manager, such as (vim-plug)[https://github.com/junegunn/vim-plug]
+Install the plugin with your favorite plugin manager, such as [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```
 Plug 'kirbycool/one-colors.vim'
