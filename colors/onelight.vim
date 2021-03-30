@@ -2,7 +2,7 @@
 " Author:      Kirby Cool ()
 " Webpage:     
 " Description: 
-" Last Change: 2021-03-29
+" Last Change: 2021-03-30
 
 hi clear
 
@@ -45,9 +45,9 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Search ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#986801 guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#e45649
-    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#2c323d guifg=#383a42 gui=NONE
+    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#2c323d guifg=#fafafa gui=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#696c77 gui=NONE
-    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#3e4452 guifg=#383a42 gui=NONE
+    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#3e4452 guifg=#fafafa gui=NONE
     hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#2c323d guifg=NONE gui=NONE
     hi TabLineSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#a626a4 guifg=#fafafa gui=NONE
     hi Title ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#383a42 gui=NONE
@@ -110,9 +110,9 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Search ctermbg=darkyellow ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline
-    hi StatusLine ctermbg=statusline ctermfg=black cterm=NONE
+    hi StatusLine ctermbg=statusline ctermfg=white cterm=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=darkgray cterm=NONE
-    hi TabLine ctermbg=statusline ctermfg=black cterm=NONE
+    hi TabLine ctermbg=statusline ctermfg=white cterm=NONE
     hi TabLineFill ctermbg=statusline ctermfg=NONE cterm=NONE
     hi TabLineSel ctermbg=magenta ctermfg=white cterm=NONE
     hi Title ctermbg=NONE ctermfg=black cterm=NONE
