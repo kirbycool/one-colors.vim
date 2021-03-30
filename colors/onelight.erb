@@ -77,6 +77,8 @@
     bg          = ["#fafafa", "NONE", "white"]
 
     menugray    = ["#dfdfdf", "NONE", "gray"] # rakr/vim-one
+    statusline1 = ["#2c323d", "NONE", "statusline"] # Stolen from itchyny/lightline.vim
+    statusline2 = ["#3e4452", "NONE", "statusline"] # Stolen from itchyny/lightline.vim
     # Step 4: highlights
     #
     # You can define highlight groups like this:
@@ -153,13 +155,13 @@
         [ "SpellCap", "SpellBad" ],
         [ "SpellLocal", "SpellBad" ],
         [ "SpellRare", "SpellBad" ],
-        [ "StatusLine", mono3, mono1, "NONE" ],
+        [ "StatusLine", statusline1, mono1, "NONE" ],
         [ "StatusLineNC", "NONE", mono2, "NONE" ],
         [ "StatusLineTerm", "StatusLine" ],
         [ "StatusLineTermNC", "StatusLineNC" ],
-        [ "TabLine", mono3, mono1, "NONE" ],
-        [ "TabLineFill", "NONE", "NONE", "NONE" ],
-        [ "TabLineSel", mono2, mono1, "NONE" ],
+        [ "TabLine", statusline2, mono1, "NONE" ],
+        [ "TabLineFill", statusline1, "NONE", "NONE" ],
+        [ "TabLineSel", magenta, bg, "NONE" ],
         [ "Terminal", "Normal" ],
         [ "Title", "NONE", mono1, "NONE" ],
         [ "Underlined", "NONE", mono1, "underline" ],

@@ -2,7 +2,7 @@
 " Author:      Kirby Cool ()
 " Webpage:     
 " Description: 
-" Last Change: 2020-09-29
+" Last Change: 2021-03-29
 
 hi clear
 
@@ -45,11 +45,11 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Search ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#e5c07b guifg=NONE gui=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=NONE gui=underline guisp=#e06c75
-    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=#abb2bf gui=NONE
+    hi StatusLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#2c323d guifg=#abb2bf gui=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#828997 gui=NONE
-    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#5c6370 guifg=#abb2bf gui=NONE
-    hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
-    hi TabLineSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#828997 guifg=#abb2bf gui=NONE
+    hi TabLine ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#3e4452 guifg=#abb2bf gui=NONE
+    hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#2c323d guifg=NONE gui=NONE
+    hi TabLineSel ctermbg=NONE ctermfg=NONE cterm=NONE guibg=#c678dd guifg=#282c34 gui=NONE
     hi Title ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#abb2bf gui=NONE
     hi Underlined ctermbg=NONE ctermfg=NONE cterm=underline guibg=NONE guifg=#abb2bf gui=underline
     hi VertSplit ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=#5c6370 gui=NONE
@@ -110,11 +110,11 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Search ctermbg=yellow ctermfg=NONE cterm=NONE
     hi SignColumn ctermbg=NONE ctermfg=NONE cterm=NONE
     hi SpellBad ctermbg=NONE ctermfg=NONE cterm=underline
-    hi StatusLine ctermbg=darkgray ctermfg=white cterm=NONE
+    hi StatusLine ctermbg=statusline ctermfg=white cterm=NONE
     hi StatusLineNC ctermbg=NONE ctermfg=gray cterm=NONE
-    hi TabLine ctermbg=darkgray ctermfg=white cterm=NONE
-    hi TabLineFill ctermbg=NONE ctermfg=NONE cterm=NONE
-    hi TabLineSel ctermbg=gray ctermfg=white cterm=NONE
+    hi TabLine ctermbg=statusline ctermfg=white cterm=NONE
+    hi TabLineFill ctermbg=statusline ctermfg=NONE cterm=NONE
+    hi TabLineSel ctermbg=magenta ctermfg=black cterm=NONE
     hi Title ctermbg=NONE ctermfg=white cterm=NONE
     hi Underlined ctermbg=NONE ctermfg=white cterm=underline
     hi VertSplit ctermbg=NONE ctermfg=darkgray cterm=NONE
